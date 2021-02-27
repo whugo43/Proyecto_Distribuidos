@@ -15,6 +15,6 @@
 	mysqli_query($mysqli,"INSERT INTO paciente VALUES('$cedula', '$nombre', '$apellido','$contrasena', '$fecha_nacimiento','$enfermedad')") or die("<h2>Error Guardando los datos</h2>");
 	echo'
 		<script>
-			location.href="../vistas/dashboard_empleado.html";
+			location.href="../vistas/dashboard_empleado.php";
 		</script>'
 ?>

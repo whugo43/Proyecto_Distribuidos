@@ -17,6 +17,8 @@
 						<th scope='col'> apellido</th>
 						<th scope='col'> fecha de nacimiento</th>
 						<th scope='col'> seleccionar</th>
+						<th scope='col'> editar</th>
+						<th scope='col'> eliminar</th>
 						</tr>
 					</thead>
 					<tbody>";
@@ -35,7 +37,9 @@
 			$fecha_nacimiento=$fila['fecha_nacimiento'];
 			$enfermedad=$fila['enfermedad'];$enfermedad= str_replace(' ','_',$enfermedad);
 
-			echo	"<td><a href=consulta_individual.php?cedula=".$cedula."&nombre=".$nombre."&apellido=".$apellido."&apellido=".$apellido."&fecha_nacimiento=".$fecha_nacimiento."&enfermedad=".$enfermedad.">seleccionar</td>";
+			echo	"<td><a href=consulta_individual.php?cedula=".$cedula.">seleccionar</td>";
+			echo	"<td><a href=editar_individual.php?cedula=".$cedula.">editar</td>";
+			echo	"<td><a href=../includes/delete_paciente.php?cedula=".$cedula.">eliminar</td>";
 
 		echo"</tr>";
 	}
