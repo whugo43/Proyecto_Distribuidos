@@ -14,7 +14,7 @@ while(True):
     else:
         lista_actual = nueva_lista_actual(lista_actual, lista_nueva,conexion())
     print ("dormi")
-    time.sleep (5)
+    time.sleep (3)
 
     print("desperte")
 print("se detuvo")

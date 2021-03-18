@@ -28,7 +28,7 @@
 
   <?php
 // do php stuff
-readfile('menu.html');
+readfile('menu.php');
 ?>
  
 

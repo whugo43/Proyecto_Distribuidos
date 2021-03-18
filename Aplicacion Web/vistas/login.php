@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="description" content="Pagina oficial de Sweet  &amp Coffe">
   <meta name="author" content="Wong Hugo">
-  <link rel="icon" href="../../favicon.ico">
+  <link rel="icon" href="../favicon.ico">
   <title>Toma la decision</title> 
 
   <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
@@ -26,15 +26,15 @@
 <body>
 <div class="container">  
     <div class="jumbotron">
-      <h1>Toma la mejor decision</h1>      
+      <h1>Sistema de Salud</h1>      
     </div>
     </div>
 
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="well well-sm">
-                <form class="form-horizontal" action="../includes/validar_usuario.php" method="post">
+            <div class="well well-sm  form-horizontal">
+              <form  action="../includes/validar_usuario.php" method="post">
                 <fieldset>
                     
                  <legend class="text-center header">Login</legend>
@@ -43,7 +43,7 @@
                     <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
                     <div class="col-md-8">
                     	<a>username:</a>
-                      <input id="username" name="username" type="text" placeholder="username" class="form-control" maxlength="10" ></input>
+                      <input id="username" name="username" type="text" placeholder="username" class="form-control" minlength="5" maxlength="10" required></input>
                     </div>
                   </div>
             
@@ -51,24 +51,32 @@
                     <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
                     <div class="col-md-8">
                     <a>password:</a>
-                      <input id="password" name="password" type="password" placeholder="password" maxlength="16" class="form-control"></input>
+                      <input id="password" name="password" type="password" placeholder="password" minlength="6" maxlength="16" class="form-control" required></input>
                     </div>
                   </div> 
 
-                    <div class="form-group">
-							        <div class="col-xs-12 col-lg-3 text-center">
-                          
-                            </div>
-                            <div class="col-xs-12  text-center">
-                                <button type="registrar" class="btn btn-primary btn-lg" href="validar_usuario.php">Login</button>
-                            </div>
-                                </div>
-						
-                        </div>
-                    </fieldset>
+                  <div class="form-group">
+							      <div class="col-xs-12 col-lg-3 text-center">
+                        
+                    </div>
+                    <div class="col-xs-6  text-center">
+                      <button  class="btn btn-primary btn-lg" href="validar_usuario.php">Login</button>
+                      
+                    </div>
+                  </div>
+                  </fieldset>
 
+</form>
 
-                </form>
+                  <div class="col-xs-12  text-center">
+                    <?php
+                      // do php stuff
+                      readfile('registro.php');
+                    ?>
+                  </div>
+						               
+                
+         
             </div>
 	    </div>                         
     </div>

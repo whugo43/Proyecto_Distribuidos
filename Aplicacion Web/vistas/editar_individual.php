@@ -1,7 +1,7 @@
 <?php
    include('../includes/session.php');
    $cedula =$_GET['cedula'];
-   $sql = "SELECT * FROM paciente WHERE cedula = $cedula";
+   $sql = "call GetPaciente($cedula)";
       $result=$mysqli->query($sql);
        $paciente=$result->fetch_assoc()
 ?>
@@ -31,7 +31,7 @@
 <body>
 <?php
 // do php stuff
-readfile('menu.html');
+readfile('menu.php');
 ?>
 
 <div class="container">
